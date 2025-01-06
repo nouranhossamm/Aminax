@@ -8,13 +8,17 @@ import com.animax.animax.entities.User;
 import com.animax.animax.services.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,9 +27,26 @@ public class AuthenticationController {
 
     private final AuthenticationService authenticationService;
 
+    @GetMapping("/")
+    public Map<String, Object> home(@AuthenticationPrincipal OAuth2User principal) {
+        Map<String, Object> response = new HashMap<>();
+        if (principal != null) {
+            response.put("name", principal.getAttribute("name"));
+            response.put("email", principal.getAttribute("email"));
+        } else {
+            response.put("message", "User not authenticated");
+        }
+        return response;
+    }
+
     @RequestMapping("user")
     public Principal user(Principal principal) {
         return principal;
+    }
+
+    @GetMapping("login")
+    public String welcome() {
+        return "Hi";
     }
 
     @GetMapping("profile")
