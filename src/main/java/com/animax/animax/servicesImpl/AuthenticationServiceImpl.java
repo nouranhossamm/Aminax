@@ -1,17 +1,15 @@
 package com.animax.animax.servicesImpl;
 
-import com.animax.animax.dto.JwtAuthenticationResponse;
-import com.animax.animax.dto.RefreshTokenRequest;
-import com.animax.animax.dto.SigninRequest;
-import com.animax.animax.dto.SignupRequest;
+import com.animax.animax.dto.responses.JwtAuthenticationResponse;
+import com.animax.animax.dto.requests.RefreshTokenRequest;
+import com.animax.animax.dto.requests.SigninRequest;
+import com.animax.animax.dto.requests.SignupRequest;
 import com.animax.animax.entities.User;
 import com.animax.animax.mapper.UserMapper;
 import com.animax.animax.services.AuthenticationService;
 import com.animax.animax.repositories.UserRepository;
 import com.animax.animax.services.JWTService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -20,7 +18,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import java.util.HashMap;
-import java.util.Map;
 
 @Service
 @RequiredArgsConstructor

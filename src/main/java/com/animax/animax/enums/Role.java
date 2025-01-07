@@ -1,4 +1,4 @@
-package com.animax.animax.entities;
+package com.animax.animax.enums;
 
 public enum Role {
     USER,

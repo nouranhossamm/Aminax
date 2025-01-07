@@ -1,5 +1,6 @@
 package com.animax.animax.entities;
 
+import com.animax.animax.enums.TokenType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

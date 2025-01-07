@@ -1,4 +1,4 @@
-package com.animax.animax.dto;
+package com.animax.animax.dto.requests;
 
 import lombok.Data;
 

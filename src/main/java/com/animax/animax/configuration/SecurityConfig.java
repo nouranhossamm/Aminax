@@ -1,6 +1,6 @@
 package com.animax.animax.configuration;
 
-import com.animax.animax.entities.Role;
+import com.animax.animax.enums.Role;
 import com.animax.animax.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

@@ -1,6 +1,6 @@
 package com.animax.animax.mapper;
 
-import com.animax.animax.dto.SignupRequest;
+import com.animax.animax.dto.requests.SignupRequest;
 import com.animax.animax.entities.User;
 import org.mapstruct.Mapper;
 

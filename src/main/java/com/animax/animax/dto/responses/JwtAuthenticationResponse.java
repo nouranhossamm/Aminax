@@ -1,4 +1,4 @@
-package com.animax.animax.dto;
+package com.animax.animax.dto.responses;
 
 import lombok.Data;
 

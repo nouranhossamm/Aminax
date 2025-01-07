@@ -1,9 +1,9 @@
 package com.animax.animax.services;
 
-import com.animax.animax.dto.JwtAuthenticationResponse;
-import com.animax.animax.dto.RefreshTokenRequest;
-import com.animax.animax.dto.SigninRequest;
-import com.animax.animax.dto.SignupRequest;
+import com.animax.animax.dto.responses.JwtAuthenticationResponse;
+import com.animax.animax.dto.requests.RefreshTokenRequest;
+import com.animax.animax.dto.requests.SigninRequest;
+import com.animax.animax.dto.requests.SignupRequest;
 import com.animax.animax.entities.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.validation.BindingResult;
